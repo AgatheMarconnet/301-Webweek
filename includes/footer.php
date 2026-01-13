@@ -6,7 +6,7 @@
 <footer>
     <div class="footer.logo">
     <a href="index.php">
-      <img src="img/logo.jpg" alt="Logo" />
+      <img src="../img/logo.jpg" alt="Logo" />
     </a>
   </div>
   <nav class="footer.menu">
