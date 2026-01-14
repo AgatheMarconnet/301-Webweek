@@ -20,11 +20,11 @@
   </div>
 
   <nav class="menu">
-  <a href="/pages/stages.php">Stage</a>
-  <a href="/pages/cours.php">Cours</a>
-  <a href="/pages/association.php">Association</a>
-  <a href="/pages/histoire.php">Histoire</a>
-  <a href="/pages/contact.php">Contact</a>
+  <a href="../pages/stages.php">Stage</a>
+  <a href="../pages/cours.php">Cours</a>
+  <a href="../pages/association.php">Association</a>
+  <a href="../pages/histoire.php">Histoire</a>
+  <a href="../pages/contact.php">Contact</a>
   </nav>
 
   <div class="header-droit">
