@@ -3,6 +3,7 @@
 ?>
 
 <!--footer-->
+<link rel="stylesheet" href="css/styles.css">
 <footer>
     <div class="footer.logo">
     <a href="index.php">
