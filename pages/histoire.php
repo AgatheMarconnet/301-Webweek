@@ -108,7 +108,8 @@ L’Aïkido se pratique à mains nues, au sabre ou au bâton et se base sur des 
                 <p>Maîtriser les principales techniques, coordonner parfaitement corps et esprit.</p>
             </div>
         </div>
-
+ </div> 
+    </section> 
 
 </body>
 </html>

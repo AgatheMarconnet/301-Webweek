@@ -75,7 +75,6 @@ body {
     justify-content: space-around;
     text-align: center;
     margin-bottom: 50px;
-    font-family: "korosu";
 }
 
 .aikido-mots h2 {
@@ -113,47 +112,55 @@ text-align:justify;
 text-align:justify;
 }
 
-/* Cartes grades */
-/* Structure grille */
+/* ===== GRADES – DESIGN SOBRE NOIR & BLANC AVEC HOVER ===== */
+
+.grades-section {
+    margin: 80px 0;
+}
+
+/* Grille : 6 cartes sur une ligne */
 .grade-grille {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
-    gap: 30px; /* Espace entre les cartes */
-    padding: 20px;
-    max-width: 1500px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 40px;
 }
 
-/* Style Carte */
+/* Carte */
 .carte {
-    background-color: #f4f4f4;
-    border-radius: 20px;
-    text-align: center;
-    transition: transform 0.3s ease;
-
+    background-color: #000; /* fond noir */
+    color: #fff; /* texte blanc */
+    border: 1px solid #000;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 260px;
+    transition: all 0.3s ease; /* transition pour hover */
 }
 
+/* Hover : fond blanc, texte noir, léger zoom */
 .carte:hover {
-    transform: translateY(-5px);
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.03);
 }
 
-/* En-tête avec l'arrondi */
+/* Titre */
 .carte-header {
-    background-color: #2f4f5f; 
-    color: #fff; /* Texte Blanc */
-    padding: 40px 20px;
-    border-bottom-left-radius: 50% 30%;
-    border-bottom-right-radius: 50% 30%;
+    margin-bottom: 20px;
 }
 
 .carte-header h3 {
-    margin: 0;
-    font-size: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
 }
 
-/* Corps de la carte */
-.carte-body {
-    padding: 20px;
-    color: #2f4f5f;
-    
+/* Texte */
+.carte-body p {
+    font-size: 14px;
+    line-height: 1.6;
 }
-
