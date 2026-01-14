@@ -1,11 +1,6 @@
 <?php 
 
 ?>
-<head>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<!--footer-->
-<link rel="stylesheet" href="css/styles.css">
 <footer>
     <div class="footer-logo">
     <a href="index.php">
@@ -14,10 +9,10 @@
   </div>
   <nav class="footer-menu">
     <ul>
-      <li><a href="/301-Webweek/pages/association.php">Association</a></li>
-      <li><a href="/301-Webweek/pages/cours.php">Cours</a></li>
-      <li><a href="/301-Webweek/pages/histoire.php">Histoire</a></li>
-      <li><a href="/301-Webweek/pages/contact.php">Contact</a></li>
+      <li><a href="../pages/association.php">Association</a></li>
+      <li><a href="../pages/cours.php">Cours</a></li>
+      <li><a href="../pages/histoire.php">Histoire</a></li>
+      <li><a href="../pages/contact.php">Contact</a></li>
     </ul>
   </nav>
   <div class="footer-address">
