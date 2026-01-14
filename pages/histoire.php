@@ -29,11 +29,8 @@
     <section class="texte-histoire">
         <h3>Un art martial</h3>
         <p>
-        L’Aïkido est un art martial japonais issu des budo traditionnels de l’époque féodale. Créé en 1925 par Morihei Ueshiba, appelé O Senseï, il est le fruit d’une synthèse des anciens arts de combat japonais et d’une profonde réflexion philosophique et spirituelle. L’Aïkido repose sur des principes de non-violence, d’harmonie et de respect, et se distingue des autres arts martiaux par son caractère pacifique et humanitaire.
-        Cette discipline du corps et de l’esprit n’a pas pour but la victoire ou la domination de l’adversaire, mais une prise de conscience pacifique et un travail de développement personnel. L’Aïkido est considéré comme un budo, une voie d’accomplissement de l’être, visant à parfaire le corps, l’esprit et le comportement par une pratique régulière.
-        La pratique de l’Aïkido se fait à mains nues, mais aussi au sabre et au bâton, dans des situations debout ou à genoux. Toutes les techniques s’inscrivent dans une logique de mouvements circulaires, centrés autour du corps, permettant de canaliser, détourner et neutraliser l’agressivité sans s’y opposer directement. L’aïkidoka utilise la force et l’énergie de l’attaquant pour la retourner contre lui, avec pour objectif de désamorcer le conflit sans détruire l’adversaire.
-        L’Aïkido est une discipline mixte, sans compétition ni catégories de poids ou d’âge. La force physique n’y est pas déterminante, ce qui rend la pratique accessible à tous. Les rôles d’Uke (celui qui attaque) et de Tori (celui qui exécute la technique) sont complémentaires et reposent sur une relation d’entraide et de respect mutuel.
-        Lors des cours, les pratiquants les plus gradés accompagnent les débutants, les corrigent et les aident à progresser. Cette transmission fait partie intégrante de l’apprentissage et renforce les valeurs de partage, de respect et de cohésion propres à l’Aïkido.
+        L'Aïkido est un art martial japonais issu des budo traditionnels. Créé en 1925 par Morihei Ueshiba, c’est un sport basé sur la non-violence, l’harmonie et le respect. Cette discipline du corps et de l’esprit privilégie le développement personnel et la paix à la victoire.
+L’Aïkido se pratique à mains nues, au sabre ou au bâton et se base sur des mouvements circulaires. Debout ou à genoux, l’objectif est de canaliser et neutraliser l'agressivité sans s’opposer directement. C’est une discipline mixte, sans compétition ni catégories qui met en avant l’entraide entre les pratiquants. La force et le poids ne sont pas déterminants et les gradés accompagnent et corrigent les débutants.			
         </p>
     </section>
 
@@ -52,6 +49,68 @@
             </div>
         </div>
     </section>
+
+    <section class="grades-section">
+    <h3>Les grades en Aïkido</h3>
+    
+    <div class="grade-grille">
+        <div class="carte">
+            <div class="carte-header">
+                <h3>6ème Kyu</h3>
+            </div>
+            <div class="carte-body">
+                <p>Découverte des bases et des mouvements simples, apprendre à tomber et se relever en sécurité.</p>
+            </div>
+        </div>
+
+          <div class="carte">
+            <div class="carte-header">
+                <h3>5ème Kyu</h3>
+            </div>
+            <div class="carte-body">
+                <p>Commencer à coordonner ses mouvements avec un partenaire et comprendre le rythme de l’Aïkido.</p>
+            </div>
+        </div>
+
+          <div class="carte">
+            <div class="carte-header">
+                <h3>4ème Kyu</h3>
+            </div>
+            <div class="carte-body">
+                <p>Approfondir les techniques de base et commencer à combiner les mouvements entre eux.</p>
+            </div>
+        </div>
+
+          <div class="carte">
+            <div class="carte-header">
+                <h3>3ème Kyu</h3>
+            </div>
+            <div class="carte-body">
+                <p>Développer plus de fluidité et de précision dans les techniques, tout en maintenant l’équilibre et le contrôle.</p>
+            </div>
+        </div>
+
+          <div class="carte">
+            <div class="carte-header">
+                <h3>2ème Kyu</h3>
+            </div>
+            <div class="carte-body">
+                <p>Commencer à appliquer les techniques plus rapidement et de manière plus naturelle, tout en respectant l’énergie de l’autre.</p>
+            </div>
+        </div>
+
+          <div class="carte">
+            <div class="carte-header">
+                <h3>1er Kyu</h3>
+            </div>
+            <div class="carte-body">
+                <p>Maîtriser les principales techniques, coordonner parfaitement corps et esprit.</p>
+            </div>
+        </div>
+        <p>Le grade est attribué à l’initiative du professeur et la ceinture des pratiquants reste blanche tout au long de ces apprentissages. Les niveaux sont matérialisés par des ceintures en couleur seulement pour les enfants. 
+Au-delà, les grades “DAN” sont délivrés par la fédération d’Aïkido. Les DAN sont au nombre de dix et récompensent la maîtrise technique et morale. En France, ils sont attribués (jusqu’au 4e DAN) via un examen devant un jury, puis par les hautes autorités à partir du 5e DA.
+</p>
+</section>
 
 </body>
 </html>
