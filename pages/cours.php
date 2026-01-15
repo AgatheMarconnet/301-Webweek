@@ -22,14 +22,15 @@
 <div class="Dojo-Quincieu">
     <h2> Dojo Qunincieu </h2>
     <p> Adresse : 1, avenue de Bonneville, 43000 Aiguilhe<p>
-     <img src=>
+     <img src="../cours_dojo.png" alt ="cours dans le dojo">
 </div>    
 <div class="tarifs">
     <h2>Tarifs</h2>
 <section class="photos-tarifs">
     <img src>
 </section>
-<p> dhbznaozndd</p>    
+<p> Les prix indiqués ci-dessus comprennent la possibilité de participer à tous les cours correspondant à sa tranche d'âge, la Licence à la FFAAA ainsi que l’assurance et l’adhésion à l’association « Aïkido Le Puy en Velay ». Possibilité d'échelonner le règlement. Tous les chèques devront être remis au moment de l'inscription pour que celle-ci soit effective.
+</p>    
 </div>
 </body>
 </html>
