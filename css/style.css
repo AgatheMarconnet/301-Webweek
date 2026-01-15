@@ -126,6 +126,7 @@ button {
 footer {
   display: flex;
   align-items: flex-start; 
+  flex-direction: row;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
   gap: 30px; 
@@ -178,6 +179,7 @@ footer {
 .footer-rs img {
   width: 32px;
   height: auto;
+}
 }
 
 /* PAGE HISTOIRE */
