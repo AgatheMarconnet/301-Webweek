@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cours</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
    <h1>AÏKIDO Le-Puy-en-Velay </h1>
@@ -26,17 +27,26 @@
 </div>    
 <div class="tarifs">
     <h2>Tarifs</h2>
-<section class="inscruption-section">
+<section class="inscription-section">
     <div class="grade-grille">
         <div class="carte">
             <div class="carte-header">
                 <h2> Adultes </h2>
             </div>
             <div class="carte-body">
-             <p classs="prix"> 205€ </p>
+             <p class="prix"> 205€ </p>
              <p> Accès complet aux cours adulte toute l'année.</p>
             </div>
         </div>
+        <div class="carte">
+                <div class="carte-header">
+                    <h2>Ados / Étudiants</h2>
+                </div>
+                <div class="carte-body">
+                    <p class="prix">170€</p>
+                    <p>Adolescents (14-18 ans), étudiants et demandeurs d'emploi.</p>
+                </div>
+            </div>
          <div class="carte">
             <div class="carte-header">
                 <h2>Enfants</h2>
