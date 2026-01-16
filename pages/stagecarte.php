@@ -42,7 +42,7 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
             
         <!-- Afficher les stages--> 
             <div class="cartestage">
-                <img src="<?php echo $unStage->getImage(); ?>" alt="Affiche du stage" />
+                <img src="<?php echo $unStage->getImage(); ?>" alt="Affiche du stage"  width="100%;" />
                 <h3><?php echo $unStage->getNom(); ?></h3>
 
                 <p><?php if ($unStage->getDateDebut()===$unStage->getDateFin()) {?>
