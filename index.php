@@ -78,11 +78,18 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
                 
                 <?php echo $unAvis->getTitreAvis(). "<br>". $unAvis->getDescriptionAvis();?>
             </div>
+            <form action="api/supprimerAvis.php" method="POST" class="formulaire-avis">
+                <input type="hidden" name="idAvisActuel" value="<?php echo $unAvis->getIdAvis(); ?>">
+                <button type="submit" class="supprimer">Supprimer l'avis</button>
+            </form>
+            <form action="api/modifierAvis.php" method="POST" class="formulaire-avis">
+                <button type="submit" class="modifier">Modifier l'avis</button>
+        </form>
         <?php endforeach ?>
             <section class="section-formulaire-avis">
     <h2>Laissez-nous votre avis</h2>
     
-    <form action="script/ajouterAvis.php" method="POST" class="formulaire-avis">
+    <form action="api/ajouterAvis.php" method="POST" class="formulaire-avis">
         <div>
         <label>Nom :</label>
         <input type="text" id="nomAvis" name="nomAvis" required placeholder="Jean Dupont">
@@ -109,8 +116,6 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
         <button type="submit" class="publier">Publier mon avis</button>
     </form>
 </section>
-        <button>Modifier un avis</button>
-        <button>Supprimer un avis</button>
                 
         <script src="js/mustache.min.js"></script>
         <script src="js/script.js"></script>
