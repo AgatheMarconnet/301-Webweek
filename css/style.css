@@ -22,7 +22,29 @@ body{
 
 h1 {
     font-family: "Cabinet" , sans-serif;
+    font-size: 60px;
+    color: #000;
 }
+
+h2 {
+    font-family: 'Clash', sans-serif;
+    font-size: 35px;
+    color: #000;
+}
+
+h3 {
+    font-family: 'Cabinet', sans-serif;
+    font-size: 25px;
+    color: #000;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #000;
+}
+
+
 /*contact*/
 label{
     text-align: left;
@@ -90,12 +112,6 @@ button {
     background-color: #2f4f5f;
     border-radius: 20px;
     color: white;
-    padding: 8px 16px;
-<<<<<<< HEAD
-    color: black;
-=======
-  color: black;
->>>>>>> 7c55e60fafcb80dc780c5e9e92606a16851ca0e2
   text-decoration: none;
   padding: 8px 16px;
   background-image: linear-gradient(#2f4f5f, #2f4f5f);
@@ -103,21 +119,7 @@ button {
   background-position: left bottom;
   background-repeat: no-repeat;
   transition: background-size 0.3s ease, color 0.3s ease;
-<<<<<<< HEAD
 }
-
-.menu a:hover {
-  color: #2f4f5f;
-  background-size: 100% 3px;
-=======
->>>>>>> 7c55e60fafcb80dc780c5e9e92606a16851ca0e2
-}
-
-.menu a:hover {
-  color: #2f4f5f;
-  background-size: 100% 3px;
-}
-
 
 /* ZONE DROITE */
 .header-droit {
@@ -151,10 +153,7 @@ button {
 footer {
   display: flex;
   align-items: flex-start; 
-<<<<<<< HEAD
   flex-direction: row;
-=======
->>>>>>> 7c55e60fafcb80dc780c5e9e92606a16851ca0e2
   padding: 40px 20px;
   font-family: Arial, sans-serif;
   gap: 30px; 
@@ -303,9 +302,6 @@ text-align:justify;
 /* Texte */
 .carte-body p {
     font-size: 14px;
-<<<<<<< HEAD
-}
-=======
 }
 
 
@@ -331,6 +327,3 @@ main {
     color:#000;
     text-decoration: none;
 }
-
-
->>>>>>> 7c55e60fafcb80dc780c5e9e92606a16851ca0e2

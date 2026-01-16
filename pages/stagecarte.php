@@ -21,6 +21,10 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
     <title>Stages</title>
 </head>
 <body>
+    <H1>Bonjour<h1>
+        <h2>Sous titre</h2>
+        <h3>Sous sous titre</h3>
+        <p>Paragraphe</p>
     <main>
       <?php foreach ($stages as $unStage) : ?>
         <?php 
