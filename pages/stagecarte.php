@@ -1,6 +1,5 @@
 <?php 
 include '../includes/header.php';
-include '../includes/footer.php';
 include_once '../classes/database.php';
 include_once '../classes/stage.php';
 include_once '../classes/lieu.php';
@@ -21,10 +20,6 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
     <title>Stages</title>
 </head>
 <body>
-    <H1>Bonjour<h1>
-        <h2>Sous titre</h2>
-        <h3>Sous sous titre</h3>
-        <p>Paragraphe</p>
     <main>
       <?php foreach ($stages as $unStage) : ?>
         <?php 
@@ -41,7 +36,7 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
         <!-- Afficher les stages--> 
             <div class="cartestage">
                 <img src="<?php echo $unStage->getImage(); ?>" alt="Affiche du stage" />
-                <h3> · <?php echo $unStage->getNom(); ?></h3>
+                <h3><?php echo $unStage->getNom(); ?></h3>
 
                 <p><?php if ($unStage->getDateDebut()===$unStage->getDateFin()) {?>
                     Le <?php echo $unStage->getDateDebut();
@@ -51,7 +46,7 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
                 }?>
                 </p> 
                 <p> 
-                    <?php echo $lieu->getVille(); ?>, 
+                    <?php echo $lieu->getVille(); ?>
                 </p>
             </div>
         </a>
@@ -59,3 +54,6 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
     </main> 
 </body>
 </html>
+<?php
+include '../includes/footer.php';
+?>
