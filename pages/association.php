@@ -6,6 +6,9 @@
     <title>Association</title>
 </head>
 <body>
-    
+   <h1>Thomas Gavory</h1>
+   <h2> 6ème DAN</h2>
+   <p> Diplômé d'État</p>
+   <p> </p>
 </body>
 </html>
