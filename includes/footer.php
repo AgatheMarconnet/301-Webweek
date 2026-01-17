@@ -1,14 +1,14 @@
 <footer>
     <div class="footer-logo">
-    <a href="index.php">
+    <a href="../index.php">
       <img src="../img/logo.jpg" alt="Logo" />
     </a>
   </div>
   <nav class="footer-menu">
     <ul>
       <li><a href="../pages/association.php">Association</a></li>
-      <li><a href="../pages/cours.php">Cours</a></li>
-      <li><a href="../pages/histoire.php">Histoire</a></li>
+      <li><a href="../pages/cours.php"><p>Cours</a></li>
+      <li><a href="../pages/histoire.php"><p>Histoire</a></li>
       <li><a href="../pages/stagecarte.php">Stage</a></li>
     </ul>
   </nav>
