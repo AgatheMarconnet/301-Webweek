@@ -71,7 +71,6 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
     </a>
     {{/stages}}
 </script>
-
 <script src="../js/mustache.min.js"></script>
 <script src="../js/script.js"></script>
     </main> 
