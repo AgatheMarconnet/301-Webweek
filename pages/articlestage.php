@@ -42,15 +42,17 @@ if(isset($_GET['id'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stage</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <?php include '../includes/header.php';?>
+
     <main>
         <div>
             <h1><?php echo $stageChoisi->getNom(); ?></h1>
-            <img src="<?php echo $stageChoisi->getImage(); ?>" alt="Affiche du stage" style="width:200px;"/>
+            <img src="<?php echo $stageChoisi->getImage(); ?>" alt="Affiche du stage"/>
             <h2>Infos pratiques </h2>
             <p><strong>Animateur :</strong>
-               <p>
     <?php 
         //Afficher tout les animateurs sous la forme nom, nom et nom en fonction du nombre d'animateur de chaque stage
         //récupère le nombre total d'animateur dans nombreAnimateur
@@ -99,6 +101,6 @@ if(isset($_GET['id'])){
                     <?php echo $lieuAssocie->getCodePostale(); ?>
                 </p>
     </main>
-    
+    <?php include '../includes/footer.php';?>
 </body>
 </html>
