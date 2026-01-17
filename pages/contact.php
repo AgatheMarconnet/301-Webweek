@@ -26,7 +26,7 @@ include '../includes/footer.php';
     <label for="message" class="titre">Message :</label><br>
     <textarea id="message" class="champ" name="message"></textarea><br><br>
 
-    <button>Envoyer
+    <button class="bouton">Envoyer</button>
 </form>
 </body>
 </html>

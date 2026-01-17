@@ -15,7 +15,7 @@
 
   <div class="header-droit">
     <span class="phone">06-10-90-24-32</span>
-    <a href="contact.php" class="contact">Contact</a>
+    <a href="contact.php" class="bouton">Contact</a>
   </div>
 </header>
 
