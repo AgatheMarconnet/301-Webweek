@@ -21,7 +21,7 @@
 body{
     display:flex;
     align-items: center;
-    justify-content: space-around;
+    min-height: 100vh;
     flex-direction: column;
     font-family: Arial, sans-serif;
 }
@@ -32,6 +32,7 @@ main{
     flex-direction: column;
 }
 
+/*TITRES*/
 h1 {
     font-family: "Cabinet" , sans-serif;
     font-size: 60px;
@@ -55,6 +56,35 @@ p {
     font-size: 20px;
     color: #000;
 }
+
+/*TITRE FORMAT MOBILE*/
+@media (max-width: 768px) { 
+    
+h1 {
+    font-family: "Cabinet" , sans-serif;
+    font-size: 35px;
+    color: #000;
+}
+
+h2 {
+    font-family: 'Clash', sans-serif;
+    font-size: 25px;
+    color: #000;
+}
+
+h3 {
+    font-family: 'Cabinet', sans-serif;
+    font-size: 20px;
+    color: #000;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+}
+}
+
 
 
 /*FORMULAIRE CONTACT + MODIFIERAVIS*/
@@ -158,6 +188,8 @@ header {
 }
 
 
+
+
 /*FOOTER*/
 footer {
   display: flex;
@@ -165,8 +197,8 @@ footer {
   padding: 40px 20px;
   justify-content: space-between; 
   width: 90%;
-  position: fixed;
   bottom: 0;
+  background-color: white;
 }
 
 .footer-menu{
@@ -330,6 +362,7 @@ main {
     gap: 20px;
     margin-top : 20px;
     margin-bottom: 20px;
+    flex: 1;
 }
 
 main a {

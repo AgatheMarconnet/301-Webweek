@@ -1,15 +1,15 @@
 <header>
   <div class="header-droit">
-    <a href="../index.php">
-      <img src="../img/logo.jpg" alt="Logo" class="logo">
+    <a href="/Webweek/index.php">
+      <img src="/Webweek/img/logo.jpg" alt="Logo" class="logo">
     </a>
   </div>
 
   <nav class="menu">
-  <a href="../pages/stagecarte.php">Stage</a>
-  <a href="../pages/cours.php">Cours</a>
-  <a href="../pages/association.php">Association</a>
-  <a href="../pages/histoire.php">Histoire</a>
+  <a href="/Webweek/pages/stagecarte.php">Stage</a>
+  <a href="/Webweek/pages/cours.php">Cours</a>
+  <a href="/Webweek/pages/association.php">Association</a>
+  <a href="/Webweek/pages/histoire.php">Histoire</a>
   
   </nav>
 

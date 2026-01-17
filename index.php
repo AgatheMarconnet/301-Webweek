@@ -20,8 +20,10 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <?php include 'includes/header.php';?>
     <main>
     <!--Afficher les 3 premiers stages -->
         <?php foreach ($stages as $unStage) :
@@ -121,14 +123,14 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
                 <label>Votre commentaire :</label>
                 <textarea id="descriptionAvis" name="descriptionAvis" rows="5" required placeholder="Racontez votre expérience"></textarea>
             </div>
-            
+
             <button type="submit" class="publier">Publier mon avis</button>
         </form>
     </section>
-                
+        
     <script src="js/mustache.min.js"></script>
     <script src="js/script.js"></script>
-    
-    </main> 
+    </main>
+    <?php include 'includes/footer.php';?>     
 </body>
 </html>
