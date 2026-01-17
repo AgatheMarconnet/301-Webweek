@@ -17,27 +17,34 @@ $unAvis = $resultats[0];
 <head>
     <meta charset="UTF-8">
     <title>Modifier Avis</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h1>Modifier l'avis de <?php echo $unAvis->getNomAvis()?></h1>
-    <!--Formulaire pour les changements remplis avec les informations de l'avis-->
-    <!-- Renvoie vers updateAvis/php pour faire la requete dans la BDD-->
-    <form action="../api/updateAvis.php" method="POST">
-        <input type="hidden" name="idAvisActuel" value="<?php echo $unAvis->getIdAvis() ?>">
-        <p>Nom: <input type="text" name="nomAvis" value="<?php echo $unAvis->getNomAvis() ?>"></p>
-        <p>Titre: <input type="text" name="titreAvis" value="<?php echo $unAvis->getTitreAvis() ?>"></p>
-        <p>Commentaire: <br>
-           <textarea name="descriptionAvis"><?php echo $unAvis->getDescriptionAvis() ?></textarea>
-        </p>
-        <label>Note :</label>
-        <select id="noteAvis" name="noteAvis" required>
-            <option value="5">5</option>
-            <option value="4">4</option>
-            <option value="3">3</option>
-            <option value="2">2</option>
-            <option value="1">1</option>
-        </select> <br>
-        <button type="submit">Enregistrer les changements</button>
-    </form>
+    <?php include '../includes/header.php';?> 
+    <main>
+        <h1>Modifier l'avis de <?php echo $unAvis->getNomAvis()?></h1>
+        <!--Formulaire pour les changements remplis avec les informations de l'avis-->
+        <!-- Renvoie vers updateAvis/php pour faire la requete dans la BDD-->
+        <form action="../api/updateAvis.php" method="POST">
+            <input type="hidden" name="idAvisActuel" value="<?php echo $unAvis->getIdAvis() ?>">
+            <label class="titre">Nom: </label> <br>
+            <input type="text" name="nomAvis" class="champ" value="<?php echo $unAvis->getNomAvis() ?>"><br><br>
+            <label class="titre">Titre: </label><br>
+            <input type="text" name="titreAvis" class="champ" value="<?php echo $unAvis->getTitreAvis() ?>"><br><br>
+            
+            <label class="titre">Note :</label><br>
+            <select id="noteAvis" name="noteAvis" class="champ" required>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+            </select> <br><br>
+            <label class="titre">Commentaire: </label> <br>
+            <textarea name="descriptionAvis" class="champ" id="message"><?php echo $unAvis->getDescriptionAvis() ?></textarea><br> <br>
+            <button type="submit" class="bouton">Enregistrer les changements</button>
+        </form>
+    </main>
+    <?php include '../includes/footer.php';?> 
 </body>
 </html>
