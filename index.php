@@ -4,6 +4,8 @@ include_once 'classes/stage.php';
 include_once 'classes/lieu.php';
 include_once 'classes/avis.php';
 
+//Pour cette page, j'ai besoin de savoir si l'utilisateur est connecté en tant qu'administrateur ou non donc je fais session start
+session_start();
 //Faire appel à la classe database
 $db = database::getInstance('aikido'); 
 
@@ -31,9 +33,8 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
         ?>
         
         <!-- Lien pour rediriger vers le stage en détail en fonction de l'id-->
-        <a href="pages/articlestage.php?id=<?php echo $unStage->getId(); ?>">
-            
-        <!-- Afficher les stages--> 
+        <a href="pages/articlestage.php?id=<?php echo $unStage->getId(); ?>">  
+            <!-- Afficher les stages--> 
             <div class="carte">
                 <img src="<?php echo $unStage->getImage(); ?>" alt="Affiche du stage" />
                 <h3> · <?php echo $unStage->getNom(); ?></h3>
@@ -51,54 +52,60 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
             </div>
         </a>
         <?php endforeach; ?>
+
         <!--Pour afficher les nouveaux stages-->
-        <div id="nouveauxStages"></div>
-                <button id="boutonVoirPlus">Voir plus de stages</button>
-                <!--Afficher les stages en plus grâce à mustache-->
-                <script id="templateressources" type="text/html">
-                    {{#stages}}
-                    <a href="articlestage.php?id={{id}}">
-                        <div class="carte">
-                            <img src="{{image}}" alt="Affiche" />
-                            <h3> · {{nom}}</h3>
-                            <p>
-                                <!--Afficher différement sir le stage dur une seul jour ou plusieurs (pour avoir le meme affichage que sur les autres pages)-->
-                                {{#memeJour}} Le {{debut}} {{/memeJour}}
-                                {{^memeJour}} Du {{debut}} au {{fin}} {{/memeJour}}
-                            </p>
-                            <p>{{ville}}</p>
-                        </div>
-                    </a>
-                    {{/stages}}
-                </script>
+        <div id="nouveauxStages">
+        </div>
+        <button id="boutonVoirPlus">Voir plus de stages</button>
+        <!--Afficher les stages en plus grâce à mustache-->
+        <script id="templateressources" type="text/html">
+            {{#stages}}
+            <a href="articlestage.php?id={{id}}">
+                <div class="carte">
+                    <img src="{{image}}" alt="Affiche" />
+                    <h3> · {{nom}}</h3>
+                    <p>
+                        <!--Afficher différement sir le stage dure un seul jour ou plusieurs (pour avoir le meme affichage que sur les autres pages)-->
+                        {{#memeJour}} Le {{debut}} {{/memeJour}}
+                        {{^memeJour}} Du {{debut}} au {{fin}} {{/memeJour}}
+                    </p>
+                    <p>{{ville}}</p>
+                </div>
+            </a>
+            {{/stages}}
+        </script>
+
         <?php foreach ($avis as $unAvis) : ?>
             <div class="avis">
-                <h3><?php echo $unAvis->getNomAvis(). " ". $unAvis->getNoteAvis();?> /5 
-                </h3>
-                
+                <h3><?php echo $unAvis->getNomAvis(). " ". $unAvis->getNoteAvis();?> /5 </h3>
                 <?php echo $unAvis->getTitreAvis(). "<br>". $unAvis->getDescriptionAvis();?>
             </div>
+        
             <form action="api/supprimerAvis.php" method="POST" class="suppression-avis">
                 <input type="hidden" name="idAvisActuel" value="<?php echo $unAvis->getIdAvis(); ?>">
                 <button type="submit" class="supprimer">Supprimer l'avis</button>
             </form>
+
             <form action="pages/modifierAvis.php" method="POST" class="modification-avis">
                 <input type="hidden" name="idAvisActuel" value="<?php echo $unAvis->getIdAvis(); ?>">
                 <button type="submit" class="modifier">Modifier l'avis</button>
             </form>
+
         <?php endforeach ?>
+
     <section class="section-formulaire-avis">
         <h2>Laissez-nous votre avis</h2>
-        
         <form action="api/ajouterAvis.php" method="POST" class="formulaire-avis">
             <div>
                 <label>Nom :</label>
                 <input type="text" id="nomAvis" name="nomAvis" required placeholder="Jean Dupont">
             </div>
+
             <div>
                 <label>Titre de votre message :</label>
                 <input type="text" id="titreAvis" name="titreAvis" required placeholder="Un super club !">
             </div>
+
             <div>
                 <label>Note :</label>
                 <select id="noteAvis" name="noteAvis" required>
@@ -109,10 +116,12 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
                     <option value="1">1</option>
                 </select>
             </div>
+
             <div>    
                 <label>Votre commentaire :</label>
                 <textarea id="descriptionAvis" name="descriptionAvis" rows="5" required placeholder="Racontez votre expérience"></textarea>
             </div>
+            
             <button type="submit" class="publier">Publier mon avis</button>
         </form>
     </section>
