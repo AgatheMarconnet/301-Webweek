@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once '../classes/database.php';
 include_once '../classes/avis.php';
 
@@ -22,6 +23,8 @@ $unAvis = $resultats[0];
 <body>
     <?php include '../includes/header.php';?> 
     <main>
+        <!-- Si l'utilisateur est connecté en tant qu'admin il peut modifier-->
+        <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true){?>
         <h1>Modifier l'avis de <?php echo $unAvis->getNomAvis()?></h1>
         <!--Formulaire pour les changements remplis avec les informations de l'avis-->
         <!-- Renvoie vers updateAvis/php pour faire la requete dans la BDD-->
@@ -44,6 +47,14 @@ $unAvis = $resultats[0];
             <textarea name="descriptionAvis" class="champ" id="message"><?php echo $unAvis->getDescriptionAvis() ?></textarea><br> <br>
             <button type="submit" class="bouton">Enregistrer les changements</button>
         </form>
+        <?php }
+        //Si l'utilisateur n'est pas connecté en tant qu'admin, il ne peut pas modifier
+        else {
+            echo "Vous devez être connecté comme administrateur pour modifier ou supprimer un avis"; ?>
+            <form action="connexion.php" method="POST">
+                <button type="submit" class="bouton">Se connecter</button>
+            </form>
+            <?php } ?>
     </main>
     <?php include '../includes/footer.php';?> 
 </body>
