@@ -57,7 +57,11 @@ p {
 }
 
 
-/*contact*/
+/*FORMULAIRE CONTACT + MODIFIERAVIS*/
+
+form{
+    width:100%;
+}
 label{
     text-align: left;
     align-items: left;
@@ -69,11 +73,9 @@ label{
     display: flex;
     justify-content: center;
     background-color: lightgrey;
-    width: 200px;
-    height: 20px;
+    width:100%;
     border: 10px lightgrey;
-    border-radius: 10px;
-    gap: 20px;
+    border-radius: 2px;
     padding: 10px;
 }
 
@@ -322,10 +324,8 @@ text-align:justify;
 
 main {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: left;
     margin-top : 20px;
     margin-bottom: 20px;
 }
