@@ -19,6 +19,17 @@ $stages = $db->getObjects("SELECT * FROM stage LIMIT 3", 'Stage', []);
 </head>
 <body>
     <main>
+        <h2> Thomas Gavory 6e dan et ses élèves vous accueillent pour découvrir et pratiquer l'aïkido.</h2>
+        <h2> Thomas Gavory</h2>
+        <h3>Enseignant diplômé d’état </h3>
+        <img src="/img/photo-prise.png" alt=" photo de Thomas Gavory qui fait une prise">
+        <p> Thomas Gavory commence l’Aïkido en 1987 dans le club de Pierre Helley, à Noisy-le-Grand. De 1989 à 2010, il s’entraîne de façon quasi quotidienne au Cercle Tissier, à Vincennes, sous la direction de Christian Tissier Shihan dont il devient l'élève. 
+        Il obtient son 6ème dan en 2019 et diplômé d’État, à l'âge de 44 ans.
+        <br>Les cours sont assurés par Thomas Gavory.</p>
+        <a href="cours.php">
+        <button type="button">Découvrir les cours -></button>
+        </a>
+
     <!--Afficher les 3 premiers stages -->
         <?php foreach ($stages as $unStage) :
             // Récupérer le lieu associé à chacun des stages afficher (avec la classe lieu)
@@ -72,6 +83,12 @@ $stages = $db->getObjects("SELECT * FROM stage LIMIT 3", 'Stage', []);
 
         <script src="js/mustache.min.js"></script>
         <script src="js/script.js"></script>
+        <h2> Association</h2>
+        <p>L’association Aïkido Le Puy-en-Velay propose des cours d’aïkido pour adultes et adolescents à partir de 12 ans, au dojo de Quincieu (1, avenue de Bonneville, 43000 Aiguilhe).</p>
+        <img src="/img/Cours.png" alt=" image d'un cours au dojo">
+        <a href="association.php">
+        <button type="button">En svoir plus</button>
+        </a>
     </main> 
 </body>
 </html>
