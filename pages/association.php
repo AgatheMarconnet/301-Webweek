@@ -39,7 +39,7 @@
 
     <div class="carousel-photos">
         <div class="carousel-slides">
-            <div class="slide_active">
+            <div class="slide active">
                 <img src="../img/photo-noir-blanc-couteau.png" alt="photo proche d'un combt avec couteau">
             </div>
             <div class="slide">
