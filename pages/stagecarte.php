@@ -19,7 +19,7 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
     <title>Stages</title>
 </head>
 <body>
-    <header><?php include '../includes/header.php';?><header>
+    <?php include '../includes/header.php';?>
     <main>
         <div class="search-container">
             <input type="text" id="inputRecherche" placeholder="Rechercher un stage">
@@ -71,14 +71,9 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
     </a>
     {{/stages}}
 </script>
-
 <script src="../js/mustache.min.js"></script>
 <script src="../js/script.js"></script>
     </main> 
-<footer>
-    <?php
-    include '../includes/footer.php';
-    ?>
-</footer>  
+    <?php include '../includes/footer.php';?> 
 </body>
 </html>
