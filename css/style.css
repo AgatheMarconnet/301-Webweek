@@ -293,6 +293,7 @@ footer {
   margin-top : 15px;
 }
 
+
 .footer-rs {
   display: flex;
   gap: 15px;
@@ -315,6 +316,13 @@ footer {
         align-content: start; 
     }
 
+}
+
+
+/* PAGE HISTOIRE */
+.histoire {
+    width: 90%;
+    margin: auto;
 }
 
 
@@ -625,22 +633,16 @@ footer {
 /*Page association*/
 .galerie_photoscouleur {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px; 
-    padding: 20px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px; 
+    max-width: 1000px;
+    margin: 20px auto;
 }
 .galerie_photoscouleur img {
     width: 100%;       
     height: 250px;     
-    object-fit: cover; 
-    border-radius: 8px; 
-    transition: transform 0.3s ease;
+    object-fit: cover;  
 }
-.galerie-photos img:hover {
-    transform: scale(1.03);
-    cursor: pointer;
-}
-
 
 /*PAGE ARTICLE STAGE*/
 
