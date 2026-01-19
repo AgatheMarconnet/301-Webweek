@@ -635,26 +635,12 @@ footer {
     text-decoration: none;
 }
 @media (max-width: 768px) {
-    .carte, .resultat {
-    grid-template-columns: repeat(1, );
+    .liste-stage, .resultat {
+        display: grid;
+    grid-template-columns: repeat(1, 1fr);
     }
 }
 
-.cartestage{
-    background-color: lightgrey;
-    text-align: left;
-    width: 300px;
-    height: 400px;
-    align-content: end;
-    padding-left: 20px;
-} 
-.cartestage h3 {
-    text-align: left;
-    color: black;
-}
-.cartestage p {
-    color:#000;
-}
 /*Page association*/
 .galerie_photoscouleur {
     display: grid;
