@@ -6,8 +6,12 @@
     <title>Cours</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<?php include '../includes/header.php'; ?>
+
 <body>
+    <?php 
+    //J'utilise la variable path pour que le chemin s'adapte en fonction de la page (ce ne sont pas les même chemin si on vient de index ou d'une autre page)
+    $path = "../";
+    include '../includes/header.php'; ?>
    <h1>AÏKIDO Le-Puy-en-Velay </h1>
    <p>L’association Aïkido Le Puy-en-Velay propose des cours d’aïkido pour adultes et adolescents à partir de 12 ans, au dojo de Quincieu (1, avenue de Bonneville, 43000 Aiguilhe). <br> Les cours sont assurés par Thomas Gavory.
 </p> 

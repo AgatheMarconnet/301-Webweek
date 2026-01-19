@@ -23,7 +23,9 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <?php include 'includes/header.php';?>
+    <?php 
+    $path = "";
+    include 'includes/header.php';?>
     <main>
     <!--Afficher les 3 premiers stages -->
         <?php foreach ($stages as $unStage) :
