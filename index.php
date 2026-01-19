@@ -2,12 +2,16 @@
 include_once 'classes/database.php';
 include_once 'classes/stage.php';
 include_once 'classes/lieu.php';
+include_once 'classes/avis.php';
 
+//Pour cette page, j'ai besoin de savoir si l'utilisateur est connecté en tant qu'administrateur ou non donc je fais session start
+session_start();
 //Faire appel à la classe database
 $db = database::getInstance('aikido'); 
 
 // Requete pour récupérer tout les stages et leurs infos
 $stages = $db->getObjects("SELECT * FROM stage LIMIT 3", 'Stage', []);
+$avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
 ?>
 
 <!DOCTYPE html>
@@ -17,8 +21,10 @@ $stages = $db->getObjects("SELECT * FROM stage LIMIT 3", 'Stage', []);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <title>Accueil</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <?php include 'includes/header.php';?>
     <main>
         <h2> Thomas Gavory 6e dan et ses élèves vous accueillent pour découvrir et pratiquer l'aïkido.</h2>
         <h2> Thomas Gavory</h2>
@@ -41,9 +47,8 @@ $stages = $db->getObjects("SELECT * FROM stage LIMIT 3", 'Stage', []);
         ?>
         
         <!-- Lien pour rediriger vers le stage en détail en fonction de l'id-->
-        <a href="pages/articlestage.php?id=<?php echo $unStage->getId(); ?>">
-            
-        <!-- Afficher les stages--> 
+        <a href="pages/articlestage.php?id=<?php echo $unStage->getId(); ?>">  
+            <!-- Afficher les stages--> 
             <div class="carte">
                 <img src="<?php echo $unStage->getImage(); ?>" alt="Affiche du stage" />
                 <h3> · <?php echo $unStage->getNom(); ?></h3>
@@ -61,6 +66,7 @@ $stages = $db->getObjects("SELECT * FROM stage LIMIT 3", 'Stage', []);
             </div>
         </a>
         <?php endforeach; ?>
+
         <!--Pour afficher les nouveaux stages-->
         <div id="nouveauxStages"></div>
                 <button id="boutonVoirPlus">Voir plus de stages</button>
@@ -84,17 +90,6 @@ $stages = $db->getObjects("SELECT * FROM stage LIMIT 3", 'Stage', []);
 
         <script src="js/mustache.min.js"></script>
         <script src="js/script.js"></script>
-        <h2> Association</h2>
-        <p>L’association Aïkido Le Puy-en-Velay propose des cours d’aïkido pour adultes et adolescents à partir de 12 ans, au dojo de Quincieu (1, avenue de Bonneville, 43000 Aiguilhe).</p>
-        <img src="/img/Cours.png" alt=" image d'un cours au dojo">
-        <a href="association.php">
-        <button type="button">En svoir plus</button>
-        </a>
     </main> 
-    <footer>
-        <?php
-        include '../includes/footer.php';
-        ?>
-    </footer>
 </body>
 </html>

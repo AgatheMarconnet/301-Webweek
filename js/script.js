@@ -82,46 +82,20 @@ function rechercheListener() {
         barreRecherche.innerHTML = ""; //On efface l'ancien resultat de la recherche
     }
 }
-let indexCarousel = 0;
 
-function initCarousel() {
-    const slides = document.querySelectorAll('.slide');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-
-    // On vérifie que les éléments existent sur la page avant de lancer
-    if (slides.length > 0 && prevBtn && nextBtn) {
-        
-        function changeSlide(direction) {
-            slides[indexCarousel].classList.remove('active');
-            indexCarousel = indexCarousel + direction;
-
-            if (indexCarousel >= slides.length) indexCarousel = 0;
-            if (indexCarousel < 0) indexCarousel = slides.length - 1;
-
-            slides[indexCarousel].classList.add('active');
-        }
-
-        nextBtn.addEventListener('click', () => changeSlide(1));
-        prevBtn.addEventListener('click', () => changeSlide(-1));
-
-        // Auto-défilement
-        setInterval(() => changeSlide(1), 5000);
-    }
-}
 function init() {
-    // on recupere l'element boutonVoirPlus et on ajoute l'écouteur
-    const bouton = document.getElementById('boutonVoirPlus');
-    if (bouton) {
-        bouton.addEventListener('click', chargerStages);
+
+    // on recupere l'element boutonVoirPlus et on ajoute l'écouteur pour affiche plus de stages
+    let boutonStage = document.getElementById('boutonVoirPlus');
+    if (boutonStage) {
+        boutonStage.addEventListener('click', chargerStages);
     }
 
-    // on recupere l'element inputRecherche et on ajoute l'écouteur
-    const barre = document.getElementById('inputRecherche');
+    // on recupere l'element inputRecherche et on ajoute l'écouteur pour faire une recherche
+    let barre = document.getElementById('inputRecherche');
     if (barre) {
         barre.addEventListener('input', rechercheListener);
     }
-    initCarousel();
 }
 
 
