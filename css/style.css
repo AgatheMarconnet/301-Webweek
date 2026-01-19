@@ -391,11 +391,7 @@ text-align:justify;
 
 /*Carte stage*/
 
-@media (max-width: 768px) {
-    #listeCompleteStages {
-    grid-template-columns: repeat(1, 1fr);
-    }
-}
+
 
 .search-container {
     display: flex;
@@ -427,15 +423,15 @@ text-align:justify;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    width: 100%;
-    margin-top: 40px;
+    width: 80%;
 }
 
 #listeCompleteStages a {
     text-decoration: none;
 }
+
 .cartestage{
-    background-color: lightgrey;
+    background-color: black;
     text-align: left;
     width: 300px;
     height: 400px;
@@ -445,11 +441,17 @@ text-align:justify;
 
 .cartestage h3 {
     text-align: left;
-    color: black;
+    color: white;
 }
 
 .cartestage p {
-    color:#000;
+    color:white;
+}
+
+@media (max-width: 768px) {
+    #listeCompleteStages {
+    grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 /*PAGE ARTICLE STAGE*/
