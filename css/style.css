@@ -136,6 +136,12 @@ button {
     gap: 20px;
 }
 
+.container-boutons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
 @media (max-width: 768px) { 
     .container-boutons {
     display: flex; 

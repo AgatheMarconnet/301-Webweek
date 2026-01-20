@@ -34,11 +34,11 @@ $unAvis = $resultats[0];
                 <!-- Renvoie vers updateAvis/php pour faire la requete dans la BDD-->
                 <form action="../api/updateAvis.php" method="POST">
                     <input type="hidden" name="idAvisActuel" value="<?php echo $unAvis->getIdAvis() ?>">
-                    <label class="titre">Nom: </label> <br>
+                    <label>Nom: </label> <br>
                     <input type="text" name="nomAvis" class="champ" value="<?php echo $unAvis->getNomAvis() ?>"><br><br>
-                    <label class="titre">Titre: </label><br>
+                    <label>Titre: </label><br>
                     <input type="text" name="titreAvis" class="champ" value="<?php echo $unAvis->getTitreAvis() ?>"><br><br>
-                    <label class="titre">Note :</label><br>
+                    <label>Note :</label><br>
                     <select id="noteAvis" name="noteAvis" class="champ" required>
                         <option value="5">5</option>
                         <option value="4">4</option>
@@ -46,7 +46,7 @@ $unAvis = $resultats[0];
                         <option value="2">2</option>
                         <option value="1">1</option>
                     </select> <br><br>
-                    <label class="titre">Commentaire: </label> <br>
+                    <label>Commentaire: </label> <br>
                     <textarea name="descriptionAvis" class="champ" id="message"><?php echo $unAvis->getDescriptionAvis() ?></textarea><br> <br>
                     <button type="submit" class="bouton">Enregistrer les changements</button>
                 </form>
