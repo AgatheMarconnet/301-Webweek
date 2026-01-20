@@ -5,7 +5,6 @@ include_once '../classes/lieu.php';
 
 //Faire appel à la classe database
 $db = database::getInstance('aikido'); 
-
 // Requete pour récupérer tous les stages et leurs infos
 $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
 ?>
@@ -17,67 +16,66 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <title>Stages</title>
+    <script src="../js/mustache.min.js"></script>
+    <script src="../js/script.js"></script>
 </head>
 <body>
     <?php
-    //J'utilise la variable path pour que le chemin s'adapte en fonction de la page (ce ne sont pas les même chemin si on vient de index ou d'une autre page)
-    $path = "../";
-    include '../includes/header.php';?>
-    
+        //J'utilise la variable path pour que le chemin s'adapte en fonction de la page (ce ne sont pas les même chemin si on vient de index ou d'une autre page)
+        $path = "../";
+        include '../includes/header.php';
+    ?>
     <main>
         <div class="search-container">
             <input type="text" id="inputRecherche" placeholder="Rechercher un stage">
         </div>
 
-    <div id="listeCompleteStages" class="liste-stage">
-      <?php foreach ($stages as $unStage) : ?>
-        <?php 
-            // Récupérer le lieu associé à chacun des stages afficher (avec la classe lieu)
-            $idLieu = $unStage->getIdLieu();
-            //Recuperer les infos du lieu en fonction de l'id sur la BDD
-            $resultatsLieu = $db->getObjects("SELECT * FROM lieu WHERE idLieu = " . $unStage->getIdLieu(), 'Lieu', []);
-            $lieu = $resultatsLieu[0];
-        ?>
-        
-        <!-- Lien pour rediriger vers le stage en détail en fonction de l'id-->
-        <a href="articlestage.php?id=<?php echo $unStage->getId(); ?>">
-            
-        <!-- Afficher les stages--> 
-            <div class="carte">
-                <img src="<?php echo $path.$unStage->getImage(); ?>" alt="Affiche du stage"  width="100%;" />
-                <h3><?php echo $unStage->getNom(); ?></h3>
+        <div id="listeCompleteStages" class="liste-stage">
+            <?php foreach ($stages as $unStage) : ?>
+                <?php 
+                    // Récupérer le lieu associé à chacun des stages afficher (avec la classe lieu)
+                    $idLieu = $unStage->getIdLieu();
+                    //Recuperer les infos du lieu en fonction de l'id sur la BDD
+                    $resultatsLieu = $db->getObjects("SELECT * FROM lieu WHERE idLieu = " . $unStage->getIdLieu(), 'Lieu', []);
+                    $lieu = $resultatsLieu[0];
+                ?>
+            <!-- Lien pour rediriger vers le stage en détail en fonction de l'id-->
+                <a href="articlestage.php?id=<?php echo $unStage->getId(); ?>">   
+                    <!-- Afficher les stages--> 
+                    <div class="carte">
+                        <img src="<?php echo $path.$unStage->getImage(); ?>" alt="Affiche du stage"  width="100%;" />
+                        <h3><?php echo $unStage->getNom(); ?></h3>
 
-                <p><?php if ($unStage->getDateDebut()===$unStage->getDateFin()) {?>
-                    Le <?php echo $unStage->getDateDebut();
-                } 
-                else { ?>
-                    Du <?php echo $unStage->getDateDebut(); ?> au <?php echo $unStage->getDateFin(); 
-                }?>
-                </p> 
-                <p> 
-                    <?php echo $lieu->getVille(); ?>
-                </p>
-            </div>
-        </a>
-      <?php endforeach; ?>
-      </div>
-<div id="resultatsRecherche" class="resultat">
-    </div>
-<script id="templateressources" type="text/html">
-    {{#stages}}
-    <a href="articlestage.php?id={{id}}">
-        <div class="carte">
-            <img src="{{image}}" alt="Affiche" />
-            <h3> · {{nom}}</h3>
-            <p>{{date}}</p> 
-            <p>{{ville}}</p>
+                        <p>
+                            <?php 
+                            if ($unStage->getDateDebut()===$unStage->getDateFin()) {?>
+                                Le <?php echo $unStage->getDateDebut();
+                            } 
+                            else { ?>
+                                    Du <?php echo $unStage->getDateDebut(); ?> au <?php echo $unStage->getDateFin(); 
+                            }?>
+                        </p> 
+                        <p> 
+                            <?php echo $lieu->getVille(); ?>
+                        </p>
+                        </div>
+                </a>
+            <?php endforeach; ?>
         </div>
-    </a>
-    {{/stages}}
-</script>
-<script src="../js/mustache.min.js"></script>
-<script src="../js/script.js"></script>
-
+        <div id="resultatsRecherche" class="resultat">
+        </div>
+        <script id="templateressources" type="text/html">
+            {{#stages}}
+            <a href="articlestage.php?id={{id}}">
+                <div class="carte">
+                    <img src="{{image}}" alt="Affiche" />
+                    <h3> · {{nom}}</h3>
+                    <p>{{date}}</p> 
+                    <p>{{ville}}</p>
+                </div>
+            </a>
+            {{/stages}}
+        </script>
     </main> 
     <?php include '../includes/footer.php';?>
 </body>
