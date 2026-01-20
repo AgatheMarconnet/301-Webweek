@@ -121,16 +121,20 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
                 <div class="avis"> 
                     <h3><?php echo $unAvis->getNomAvis(). " ". $unAvis->getNoteAvis();?> /5 </h3>
                     <?php echo $unAvis->getTitreAvis(). "<br>". $unAvis->getDescriptionAvis();?>
-                
-                    <form action="api/supprimerAvis.php" method="POST" class="suppression-avis">
-                        <input type="hidden" name="idAvisActuel" value="<?php echo $unAvis->getIdAvis(); ?>">
-                        <button type="submit" class="btn">Supprimer l'avis</button>
-                    </form>
-
-                    <form action="pages/modifierAvis.php" method="POST" class="modification-avis">
-                        <input type="hidden" name="idAvisActuel" value="<?php echo $unAvis->getIdAvis(); ?>">
-                        <button type="submit" class="btn">Modifier l'avis</button>
-                    </form>
+                    <div class="btn-avis">
+                        <div class="btn-supp">
+                            <form action="api/supprimerAvis.php" method="POST" class="suppression-avis">
+                                <input type="hidden" name="idAvisActuel" value="<?php echo $unAvis->getIdAvis(); ?>">
+                                <button type="submit" class="btn">Supprimer</button>
+                            </form>
+                        </div>
+                        <div class="btn-modif">
+                            <form action="pages/modifierAvis.php" method="POST" class="modification-avis">
+                                <input type="hidden" name="idAvisActuel" value="<?php echo $unAvis->getIdAvis(); ?>">
+                                <button type="submit" class="btn">Modifier</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             <?php endforeach ?>
         </div>
