@@ -14,6 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="img/logo.jpg">
     <title>Contact</title>
 </head>
 <body>
@@ -31,16 +32,16 @@
         <form action="#" method="post">
             <h1>Inscription / Nous contacter</H1>
             
-            <label for="nom" class="titre">Nom :</label><br>
+            <label for="nom">Nom :</label><br>
             <input type="text" class="champ" name="nom"><br><br>
 
-            <label for="prenom" class="titre">Prénom :</label><br>
+            <label for="prenom">Prénom :</label><br>
             <input type="text" class="champ" name="prenom"><br><br>
 
-            <label for="email" class="titre">Email :</label><br>
+            <label for="email">Email :</label><br>
             <input type="email" class="champ" name="email"><br><br>
 
-            <label for="message" class="titre">Message :</label><br>
+            <label for="message">Message :</label><br>
             <textarea id="message" class="champ" name="message"></textarea><br><br>
 
             <button type="submit" class="btn" name="envoyer">Envoyer</button>

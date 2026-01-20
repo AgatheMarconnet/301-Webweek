@@ -19,7 +19,7 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="img/logo.jpg">
     <title>Accueil</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/mustache.min.js"></script>
@@ -118,19 +118,23 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
             <h2>Avis</h2>
             <div class="avis-index">
             <?php foreach ($avis as $unAvis) : ?>
-                <div class="carte" class="avis"> 
+                <div class="avis"> 
                     <h3><?php echo $unAvis->getNomAvis(). " ". $unAvis->getNoteAvis();?> /5 </h3>
                     <?php echo $unAvis->getTitreAvis(). "<br>". $unAvis->getDescriptionAvis();?>
-                
-                    <form action="api/supprimerAvis.php" method="POST" class="suppression-avis">
-                        <input type="hidden" name="idAvisActuel" value="<?php echo $unAvis->getIdAvis(); ?>">
-                        <button type="submit" class="btn">Supprimer l'avis</button>
-                    </form>
-
-                    <form action="pages/modifierAvis.php" method="POST" class="modification-avis">
-                        <input type="hidden" name="idAvisActuel" value="<?php echo $unAvis->getIdAvis(); ?>">
-                        <button type="submit" class="btn">Modifier l'avis</button>
-                    </form>
+                    <div class="btn-avis">
+                        <div class="btn-supp">
+                            <form action="api/supprimerAvis.php" method="POST" class="suppression-avis">
+                                <input type="hidden" name="idAvisActuel" value="<?php echo $unAvis->getIdAvis(); ?>">
+                                <button type="submit" class="btn">Supprimer</button>
+                            </form>
+                        </div>
+                        <div class="btn-modif">
+                            <form action="pages/modifierAvis.php" method="POST" class="modification-avis">
+                                <input type="hidden" name="idAvisActuel" value="<?php echo $unAvis->getIdAvis(); ?>">
+                                <button type="submit" class="btn">Modifier</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             <?php endforeach ?>
         </div>
