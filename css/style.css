@@ -260,6 +260,9 @@ header {
         font-size: 16px;
     }
 
+    .nav-burger .phone {
+        color:white;
+    }
 }
 
 /*FOOTER*/
