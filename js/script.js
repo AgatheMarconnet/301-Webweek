@@ -89,10 +89,10 @@ function rechercheListener() {
 
 //CAROUSSEL PAGE ASSOC/GALERIE
 let grilleImages = [
-    "../img/photo-noir-blanc-couteau.png",
-    "../img/photo-noir-blanc-prise.png",
-    "../img/photo-noir-blanc_prise-proche.png",
-    "../img/photo-noir-blanc-main.png"
+    "../img/photo-noir-blanc-couteau.webp",
+    "../img/photo-noir-blanc.webp",
+    "../img/photo-noir-blanc_prise.webp",
+    "../img/photo-noir-blanc-main.webp"
 ];
 let index = 0;
 //La fonction de logique (elle ne s'exécute pas toute seule)

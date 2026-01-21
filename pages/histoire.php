@@ -43,7 +43,7 @@
         <section class="fondateur">
             <h3>Fondateur de l’Aïkido</h3>
             <div class="fondateur-contenu">
-                <img src="../img/fondateur.jpg" alt="Fondateur de l'Aïkido">
+                <img src="../img/fondateur.webp" alt="Fondateur de l'Aïkido">
                 <div>
                     <p>
                         Né en 1883, c’est à l’âge de dix ans que Morihei Ueshiba commence l’étude des arts martiaux. Au fil de sa vie, il devient un expert reconnu en ju-jitsu, ken-jutsu et daito-ryu, consacrant sa vie à perfectionner sa technique et sa compréhension des arts martiaux. Au cours de son apprentissage, il constate que le vrai intérêt des arts martiaux ne réside pas dans la victoire sur un adversaire par la force, mais dans la préservation de la paix, l’acceptation et le favorissement de l’épanouissement de tous les êtres.

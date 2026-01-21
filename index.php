@@ -37,7 +37,7 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
 
         <div class="prof">
             <div class="prof-gauche">
-                <img src="img/photo-prise.png" alt=" photo de Thomas Gavory qui fait une prise">
+                <img src="img/photo-prise.webp" alt=" photo de Thomas Gavory qui fait une prise">
             </div>
             <div class="prof-droite">
                 <h3> Thomas Gavory 6e dan et ses élèves vous accueillent pour découvrir et pratiquer l'aïkido.</h3>
@@ -113,7 +113,7 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
                     </a>
                  </div>
                 <div class="assoc-gauche">
-                    <img src="img/Cours.png" alt=" image d'un cours au dojo">
+                    <img src="img/Cours.webp" alt=" image d'un cours au dojo">
                 </div>
             </div>
 

@@ -21,7 +21,7 @@
         </div>
         <div class="container">
             <div class="image-cours" >
-                <img src="../img/Cours_prise.png" alt="Cours prise">
+                <img src="../img/Cours_prise.webp" alt="Cours prise">
             </div>
             <div class="info-cours">
                 <h3><img src="../img/professeur_icone.png" class="icone">Thomas Gavory</h3>
