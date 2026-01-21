@@ -95,7 +95,7 @@ let grilleImages = [
     "../img/photo-noir-blanc-main.webp"
 ];
 let index = 0;
-//Ta fonction de logique (elle ne s'exécute pas toute seule)
+//La fonction de logique (elle ne s'exécute pas toute seule)
 function carrousel() {
     let imageElement = document.getElementById('imageAffiche');
     let boutonSuivant = document.getElementById('btnSuivant');

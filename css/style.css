@@ -272,6 +272,7 @@ footer {
   padding: 40px 20px;
   justify-content: space-between; 
   width: 90%;
+  margin-bottom: 10px;
   bottom: 0;
   background-color: white;
 }
@@ -656,7 +657,8 @@ footer {
 @media (max-width: 768px) {
     .liste-stage, .resultat {
         display: grid;
-    grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 300px);
+        justify-content: center;
     }
 }
 
@@ -811,6 +813,7 @@ main {
     justify-content: center;
     align-items: center;
     margin: 0;
+    padding: 0;
 }
 
 
@@ -867,38 +870,71 @@ main {
 }
 
 @media (max-width:768px) {
+
+    .banniere-index {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
     .stage-index{
-    display: grid;
-    grid-template-columns: repeat(1, 400px);
+        display: grid;
+        grid-template-columns: repeat(1, 300px);
     }
 
     .avis-index {
         display: grid;
-    grid-template-columns: repeat(1, 400px);
+        grid-template-columns: repeat(1, 300px);
     }
 
     .prof{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .prof-gauche {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .prof-gauche img {
-        width: 400px;
+        width: 80%;
         height: auto;
+        margin-bottom: 10px;
+        margin-top: 10px;
     }
 
     .assoc {
         display: flex;
         flex-direction: column-reverse;
+        width: 80%;
+        align-items: center;
+    }
+
+    .assoc-gauche {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .assoc-gauche img {
-        width: 400px;
+        width: 80%;
         height: auto;
+
+    }
+
+    .btn-cours {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
-
-
 
 /* Responsive page cours */
 @media screen and (max-width: 768px) {
@@ -992,8 +1028,10 @@ main {
 
 .mentions {
     width: 80%;
+}
+
+.mentions h1 {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
