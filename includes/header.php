@@ -21,10 +21,10 @@
   <div class="menu-burger">
     <h4 id="bouton"> V </h4>
     <nav class="nav-burger" id="menu">
-      <a href="<?php echo $path; ?>pages/stagecarte.php">Stage</a>
+      <a href="<?php echo $path; ?>pages/stagecarte.php">Stages</a>
       <a href="<?php echo $path; ?>pages/cours.php">Cours</a>
       <a href="<?php echo $path; ?>pages/association.php">Association</a>
-      <a href="<?php echo $path; ?>pages/histoire.php">Histoire</a>
+      <a href="<?php echo $path; ?>pages/histoire.php">Histoire du sport</a>
       <a href="tel:+33610902432" class="phone">06-10-90-24-32</a>
       <a href="<?php echo $path; ?>pages/contact.php" class="bouton">Contact</a>
       <a href="<?php echo $path; ?>pages/connexion.php" class="bouton">Connexion</a>

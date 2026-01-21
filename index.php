@@ -46,7 +46,9 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
                     <br>Les cours sont assurés par Thomas Gavory.
                 </p>
                 <a href="pages/cours.php">
-                    <button type="button" class="btn">Découvrir les cours</button>
+                    <div class="btn-cours">
+                        <button type="button" class="btn">Découvrir les cours</button>
+                    </div>
                 </a>
             </div>
         </div>
