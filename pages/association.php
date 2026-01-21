@@ -31,19 +31,19 @@
         </div>
         <h1>Galerie</h1>
         <div class="galerie_photoscouleur">
-            <img src="../img/photo_cours.png" alt="photo de cours">
-            <img src="../img/photo-prise.png" alt="photo prise aikido">
-            <img src="../img/photo-sincline.png" alt="photo de thomas gavory et un de ses élève qui se prosterne">
-            <img src="../img/photo-prise-sol.png" alt="photo d'une prise au sol">
-            <img src="../img/photo-prise-tournoi.png" alt ="photo d'une pris d'aikido à un tournoi">
-            <img src="../img/photo-cours-tokyo.png" alt="photo d'un cours à tokyo">
-            <img src="../img/photo_cours-endo-sensei.png" alt="photo avec endo sensei">
-            <img src="../img/photo-groupe_1.png" alt="photo d'un groupe avec Thomas Gavory">
-            <img src="../img/photo-groupe_2.png" alt="photo de groupe avec Thomas Gavory">
+            <img src="../img/photo_cours.webp" alt="photo de cours">
+            <img src="../img/photo-prise.webp" alt="photo prise aikido">
+            <img src="../img/photo-sincline.webp" alt="photo de thomas gavory et un de ses élève qui se prosterne">
+            <img src="../img/photo-prise-sol.webp" alt="photo d'une prise au sol">
+            <img src="../img/photo-prise-tournoi.webp" alt ="photo d'une pris d'aikido à un tournoi">
+            <img src="../img/photo-cours-tokyo.webp" alt="photo d'un cours à tokyo">
+            <img src="../img/photo_cours-endo-sensei.webp" alt="photo avec endo sensei">
+            <img src="../img/photo-groupe_1.webp" alt="photo d'un groupe avec Thomas Gavory">
+            <img src="../img/photo-groupe_2.webp" alt="photo de groupe avec Thomas Gavory">
         </div>
 
         <div class="test-carrousel">
-            <img id="imageAffiche" src="../img/photo-noir-blanc-couteau.png" style="width: 100%;">
+            <img id="imageAffiche" src="../img/photo-noir-blanc-couteau.webp" style="width: 100%;">
             <button id="btnSuivant" class="bouton">Image Suivante</button>
         </div>
 
